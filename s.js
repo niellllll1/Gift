@@ -11,18 +11,21 @@ alert("babyyy....")
 
 let iceCreamAnswer = "";
 
-while (iceCreamAnswer.toLowerCase() !== "yes") {
+while (iceCreamAnswer !== "yes") {
   iceCreamAnswer = prompt("Ice cream date after class? (yes/no)");
 
-  if (iceCreamAnswer.toLowerCase() === "yes") {
+  if (iceCreamAnswer === null) { // Check for Cancel
+    alert("Answer me!");
+    continue; // Go back to the beginning of the loop
+  } else if (iceCreamAnswer.toLowerCase() === "yes") {
     letterVisible = true;
     alert("Yayyy, ice cream date! I love you!");
     alert("dm me yes if you want ice cream date with me after class");
-    alert(" you can now read the letter bi")
+    alert(" you can now read the letter bi");
     break;
   } else if (iceCreamAnswer.toLowerCase() === "no") {
     alert("Please baby");
   } else {
-    alert("Yes or no only. Let me ask you again."); 
+    alert("Yes or no only. Let me ask you again.");
   }
 }
